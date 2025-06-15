@@ -7,7 +7,7 @@ import { Chats } from "./ChatData";
 const ChatContainer = () => {
   return (
     <>
-      <div className="container bg-gray-400 p-8  mx-auto mt-5  rounded-lg ">
+      <div className="container bg-gray-400 p-8 w-[98%]  mx-auto mt-5  rounded-lg ">
         <div className=" w-auto md:w-[500px]  bg-white rounded-2xl mx-auto overflow-hidden">
           <div className="flex  gap-3 bg-green-500 py-5 px-10 ">
             <LuMessageCircleMore size={40} className="text-white mt-3" />

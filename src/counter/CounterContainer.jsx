@@ -14,7 +14,7 @@ const CounterContainer = () => {
   return (
     <>
       <div className="  bg-gray-400 p-15  mx-auto mt-5  rounded-lg  ">
-        <p className="text-center text-9xl">{count}</p>
+        <p className="text-center text-9xl text-white">{count}</p>
 
         <div className="flex items-center justify-center mt-5 gap-4">
           <button

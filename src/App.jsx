@@ -5,7 +5,7 @@ import CounterContainer from "./counter/CounterContainer";
 const App = () => {
   return (
     <>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 my-10">
         <ChatContainer />
         <CounterContainer />  
       </div>
