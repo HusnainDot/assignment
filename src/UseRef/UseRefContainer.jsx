@@ -7,27 +7,24 @@ const UseRefContainer = () => {
   const closeMenuRef = useRef(null);
   const menuSlider = useRef(null);
 
-    useEffect(() => {
-      
+  useEffect(() => {
+    const openBtn = menuRef.current;
+    const closeBtn = closeMenuRef.current;
+    const slider = menuSlider.current; 
 
-        const openBtn = menuRef.current;
-        const closeBtn = closeMenuRef.current;
-        const  menuSlider = closeMenuRef.current;
     const openMenu = () => {
-      if (menuSlider) {
-        menuSlider.classList.remove("scale-0");
-        menuSlider.classList.add("scale-100");
+      if (slider) {
+        slider.classList.remove("scale-0");
+        slider.classList.add("scale-100");
       }
     };
 
     const closeMenu = () => {
-      if (menuSlider.current) {
-        menuSlider.current.classList.remove("scale-100");
-        menuSlider.current.classList.add("scale-0");
+      if (slider) {
+        slider.classList.remove("scale-100");
+        slider.classList.add("scale-0");
       }
     };
-
- 
 
     if (openBtn && closeBtn) {
       openBtn.addEventListener("click", openMenu);
@@ -41,6 +38,7 @@ const UseRefContainer = () => {
       }
     };
   }, []);
+  
 
   return (
     <div className="w-full h-screen bg-teal-950 text-white relative">

@@ -16,9 +16,9 @@ const App = () => {
         <CounterContainer />
         <TodoContainer />
         <FromContainer />
-        <UseRefContainer />
 
         <ReducerContainer />
+        <UseRefContainer />
       </div>
     </>
   );
