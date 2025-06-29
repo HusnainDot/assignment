@@ -14,6 +14,9 @@ const CounterContainer = () => {
   return (
     <>
       <div className="  bg-gray-400 p-15  mx-auto mt-5  rounded-lg  ">
+        <h2 className="text-center py-2 text-white capitalize  text-2xl">
+          Assignment Counter
+        </h2>
         <p className="text-center text-9xl text-white">{count}</p>
 
         <div className="flex items-center justify-center mt-5 gap-4">

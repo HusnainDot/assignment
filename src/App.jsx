@@ -5,17 +5,20 @@ import CounterContainer from "./counter/CounterContainer";
 import ViewChatContainer from "./viewChat/ViewChatContainer";
 import TodoContainer from "./Todo/TodoContainer";
 import FromContainer from "./MultiFormInputs/FromContainer";
+import UseRefContainer from "./UseRef/UseRefContainer";
+import ReducerContainer from "./Reducer/ReducerContainer";
 const App = () => {
   return (
     <>
       <div className="flex flex-col gap-10 ">
-        {/* <ChatContainer />
+        <ChatContainer />
         <ViewChatContainer />
         <CounterContainer />
-                <TodoContainer />
-        */}
+        <TodoContainer />
+        <FromContainer />
+        <UseRefContainer />
 
-        <FromContainer/> 
+        <ReducerContainer />
       </div>
     </>
   );

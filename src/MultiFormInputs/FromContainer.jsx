@@ -60,7 +60,10 @@ const FromContainer = () => {
   };
 
   return (
-    <div className="">
+    <div className=" bg-blue-950/25">
+      <h2 className="text-center py-2 text-white capitalize  text-2xl">
+        Assignment Multipal Forms
+      </h2>
       <div className="flex items-center justify-center bg-gray-500 w-full h-screen">
         {" "}
         <div className="bg-teal-950 rounded-2xl">

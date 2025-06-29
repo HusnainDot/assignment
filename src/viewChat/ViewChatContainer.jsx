@@ -22,6 +22,9 @@ const ViewChatContainer = () => {
       )}
 
       <div className="container bg-gray-400 p-1 md:p-8 w-[98%]  mx-auto mt-5  rounded-lg ">
+        <h2 className="text-center py-2 text-white capitalize  text-2xl">
+          Assignment Whats up chat with apis
+        </h2>
         <div className=" w-full md:w-[500px]  bg-white rounded-2xl mx-auto overflow-hidden">
           <h2 className="text-teal-950 text-center font-semibold text-2xl my-5">
             Users

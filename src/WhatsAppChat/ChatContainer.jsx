@@ -5,9 +5,15 @@ import SingleUser from "./SingleUser";
 import { Chats } from "./ChatData";
 
 const ChatContainer = () => {
+
+
+  
   return (
     <>
       <div className="container bg-gray-400 p-8 w-[98%]  mx-auto mt-5  rounded-lg ">
+        <h2 className="text-center py-2 text-white capitalize  text-2xl">
+          Assignment whats app chts
+        </h2>
         <div className=" w-auto md:w-[500px]  bg-white rounded-2xl mx-auto overflow-hidden">
           <div className="flex  gap-3 bg-green-500 py-5 px-10 ">
             <LuMessageCircleMore size={40} className="text-white mt-3" />
@@ -29,7 +35,7 @@ const ChatContainer = () => {
 
           <div className="flex flex-col gap-3 my-3 px-6">
             {Chats.map((obj, i) => {
-                return <SingleUser {...obj} key={i} />;
+              return <SingleUser {...obj} key={i} />;
             })}
           </div>
         </div>

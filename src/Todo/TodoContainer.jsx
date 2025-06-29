@@ -36,7 +36,11 @@ const TodoContainer = () => {
   };
 
   return (
-    <div className="bg-black/25 w-full h-screen flex items-center justify-center">
+    <div className="bg-black/25 w-full h-screen flex  flex-col items-center justify-center">
+      <h2 className="text-center py-2 text-white capitalize  text-2xl">
+        Assignment Todo List
+      </h2>
+
       <div className=" w-auto md:min-w-[600px]  rounded-md bg-gray-950">
         <h2 className="text-white text-center text-5xl mt-5 font-semibold">
           Todo List
