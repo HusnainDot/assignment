@@ -13,14 +13,14 @@ const App = () => {
   return (
     <>
       <div className="flex flex-col gap-10 ">
-        {/* <ChatContainer />
+       <ChatContainer />
         <ViewChatContainer />
         <CounterContainer />
         <TodoContainer />
         <FromContainer />
         <ReducerContainer />
         <LoremContainer/>
-        <UseRefContainer /> */}
+        <UseRefContainer /> 
 
         <PasswordGenraterContainer />
       </div>
