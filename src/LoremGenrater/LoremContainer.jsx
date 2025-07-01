@@ -1,58 +1,86 @@
-import React from 'react'
-import { FaPlus } from 'react-icons/fa6';
+import React, { useEffect, useState } from "react";
+import { FaPlus } from "react-icons/fa6";
+import { GoCopy } from "react-icons/go";
+import { LoremData } from "./LoremData";
 
 const LoremContainer = () => {
+  const [getNumber, setGetNumber] = useState();
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+  const GenrateLorem = () => {
+    let newData = LoremData.slice(0, getNumber);
+
+    if (getNumber > LoremData.length || getNumber < 1) {
+      setError(true);
+      setData([]);
+    } else {
+      setData(newData);
+    }
+  };
+
+  useEffect(() => {
+
+
+    if (getNumber >= LoremData.length) {
+      setError(true);
+    } 
+
+    setTimeout(() => {
+      setError(false);
+
+    }, 3000);
+  }, [setGetNumber, getNumber]);
+
   return (
     <>
-      <div className="w-full h-screen  bg-cyan-950/80">
+      <div className="w-full p-10 bg-cyan-950/80">
         <h2 className="text-center py-2 text-white capitalize  text-2xl">
-          Assignment Todo List
+          Assignment Lorem Genrater
         </h2>
 
-        <div className=" w-auto  md:min-w-[600px]  rounded-md bg-gray-950">
+        <div className=" w-auto  md:max-w-[600px] mx-auto  rounded-md bg-gray-950">
           <form className="w-full p-5 text-xl">
-            <label htmlFor="" className="text-white font-semibold">
-              Add Task
-            </label>
             <div
-              className={`flex items-center capitalize  rounded-xl p-3 border-2 my-2 `}
+              className={`flex items-center capitalize  rounded-xl border-gray-500 border-2 my-2  overflow-hidden`}
             >
               <input
-                type="text"
-                placeholder="Enter your task"
-                className="text-white w-full outline-0 bg-transparent"
+                value={getNumber}
+                onChange={(e) => setGetNumber(e.target.value)}
+                type="number"
+                placeholder="Enter Your number"
+                className="text-white w-full outline-0 bg-transparent py-3 pl-3"
               />
-              <button
-                type="button"
-                className={`text-gray-900 bg-white rounded-2xl cursor-pointer active:scale-95`}
-              >
-                <FaPlus size={30} />
-              </button>
             </div>
-
-            {/* {submited &&
-              (checkError ? (
-                <p className="capitalize text-red-500 font-semibold md:my-3 md:px-2 text-sm md:text-lg ">
-                  please enter something in your task
-                </p>
-              ) : (
-                <p className="capitalize text-green-500 font-semibold md:my-3 md:px-2 text-sm md:text-lg ">
-                  Your task has been added Successfully
-                </p>
-              ))} */}
+            {error && (
+              <p className="text-red-500 text-md pb-1.5  capitalize">
+                {" "}
+                 Please Enter Value under 0 To 20
+              </p>
+            )}
+            <button
+              onClick={GenrateLorem}
+              type="button"
+              className=" bg-cyan-700 py-2 mx-auto block rounded-2xl  w-[150px] text-white cursor-pointer"
+            >
+              Genrate
+            </button>
           </form>
+        </div>
 
-          <div className=" m-3 py-1  border-2 border-gray-500 rounded-xl ">
-            <h2 className="text-white text-center text-2xl font-semibold">
-              All Task
-            </h2>
-
-            <div className="flex flex-col my-3 px-4 w-full gap-y-5"></div>
-          </div>
+        <div className="grid grid-cols-1  md:grid-cols-4 gap-10 mt-10">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="text-center p-5 bg-teal-900 rounded-2xl"
+            >
+              <h2 className="text-white bold">Lorem {index + 1}</h2>
+              <h4 className="text-center text-white text-sm">{item}</h4>
+            </div>
+          ))}
         </div>
       </div>
     </>
   );
-}
+};
 
-export default LoremContainer
+export default LoremContainer;

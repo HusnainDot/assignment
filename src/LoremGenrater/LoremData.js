@@ -1,4 +1,4 @@
-export const Data = [
+export const LoremData = [
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nemo quod a veritatis cum, assumenda placeat modi corporis nihil dignissimos tempore vero quaerat velit est laboriosam dicta aut sit? Sapiente!",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae totam eum perferendis praesentium fugit quas quam sapiente molestiae laboriosam.",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laborum reiciendis eaque excepturi, amet ut necessitatibus quidem voluptatibus ab?",
